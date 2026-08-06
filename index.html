@@ -262,7 +262,8 @@ figure{margin:0}
 
 /* ── 로고 ── */
 .brand-logo{height:26px;width:auto;vertical-align:-6px;margin-right:7px}
-.hero-logo{height:74px;width:auto;margin:0 auto 14px;display:block;filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
+.hero-logo{height:58px;width:auto;filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
+.hero h1{display:flex;align-items:center;justify-content:center;gap:14px}
 .slogan{margin:14px 0 0;font-size:15.5px;color:var(--gold);font-weight:700;letter-spacing:.02em}
 
 /* ── 오시는 길 ── */
@@ -352,8 +353,7 @@ footer h2{font-size:21px}
   <div class="hero-veil"></div>
   <div class="wrap">
     <p class="denom">기독교대한감리회</p>
-    <img src="사진/web/logo.png" alt="큰샘교회 로고" class="hero-logo">
-    <h1>큰샘교회</h1>
+    <h1><img src="사진/web/logo.png" alt="큰샘교회 로고" class="hero-logo">큰샘교회</h1>
     <div class="rule"></div>
     <p class="slogan">&ldquo;한반도에 은혜의 강물이 흐르게 하라!&rdquo;</p>
     <p class="motto">성경 &middot; 예배 &middot; 선교 &middot; 삶</p>
@@ -367,7 +367,6 @@ footer h2{font-size:21px}
   <div class="wrap">
     <p class="eyebrow">예배</p>
     <h2>예배 안내</h2>
-    <p class="sub">확인된 시간만 적었습니다. 나머지는 확인 후 채웁니다.</p>
 
     <ul class="svc">
       <li>
@@ -452,8 +451,8 @@ footer h2{font-size:21px}
     <figure class="band">
       <div class="shot">
         <picture>
-          <source srcset="사진/web/about.webp" type="image/webp">
-          <img src="사진/web/about.jpg" alt="예배당 십자가 앞에 함께 선 교회 가족들" width="1000" height="750" loading="lazy" decoding="async">
+          <source srcset="사진/web/about2.webp" type="image/webp">
+          <img src="사진/web/about2.jpg" alt="정자 앞에 함께 선 큰샘교회 가족들" width="1000" height="750" loading="lazy" decoding="async">
         </picture>
       </div>
     </figure>
@@ -768,11 +767,9 @@ footer h2{font-size:21px}
       <p>1호선 석수역 1번출구 나오셔서 1번 마을버스타시고 &lsquo;창의경영고등학교&rsquo;하차하시면 됩니다.</p>
     </div>
 
-    <div class="video" style="margin-bottom:18px">
-      <iframe src="https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EA%B4%91%EB%AA%85%EC%8B%9C%20%EA%B8%B0%EC%95%84%EB%A1%9C%2023&output=embed&z=17"
-        title="큰샘교회 오시는 길 지도" loading="lazy"
-        referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </div>
+    <a href="https://map.naver.com/p/search/%ED%81%B0%EC%83%98%EA%B0%90%EB%A6%AC%EA%B5%90%ED%9A%8C" style="display:block;margin-bottom:18px">
+      <img src="사진/web/naver_map.jpg" alt="큰샘교회 위치 네이버 지도 - 경기 광명시 기아로 23" width="960" height="720" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:10px;display:block">
+    </a>
 
     <div class="addr">
       <p><span class="label">주소</span>경기 광명시 기아로 23 (소하동) 4층</p>
@@ -786,7 +783,7 @@ footer h2{font-size:21px}
      ★전화번호는 현 사이트에 이미 공개된 010-2534-0407 그대로만 쓴다. 새 연락처 추가 금지. -->
 <footer>
   <div class="wrap">
-    <h2>큰샘교회</h2>
+    <h2 style="display:flex;align-items:center;gap:10px"><img src="사진/web/logo.png" alt="" style="height:34px;width:auto">큰샘교회</h2>
     <p class="sub">기독교대한감리회 &nbsp;|&nbsp; 담임목사 서동우</p>
 
     <ul class="contact">
