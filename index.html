@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>큰샘교회 | 기독교대한감리회</title>
+<meta name="description" content="큰샘교회 — 하나님을 알고 세상속에서 하나님의 나라를 세워가는 교회. 경기 광명시 기아로 23 (소하동) 4층.">
+<meta name="description" content="큰샘교회 - 경기도 광명시 기아로 23. 성경을 가르치고 예배에 목숨 거는 감리교회. 주일예배 오전 11시.">
+<!-- ↑ 초안 단계라 검색 노출 차단. 실공개 시 이 줄을 지운다. -->
+<meta name="theme-color" content="#0D1626">
+<style>
+:root{
+  --navy:#0D1626;
+  --navy-2:#152136;
+  --gold:#C48A42;
+  --gold-2:#E0B678;
+  --ink:#1B2432;
+  --paper:#FFFFFF;
+  --paper-2:#F7F5F1;
+  --line:rgba(196,138,66,.28);
+  --hair:rgba(27,36,50,.10);
+  --muted:#6B7280;
+  --shadow:0 22px 44px -28px rgba(13,22,38,.55);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.78;
+  word-break:keep-all;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+/* ── 레이아웃 ──
+   글은 좁게(읽기 편하게), 사진은 넓게. 이 두 폭의 대비가 '정돈된 느낌'을 만든다. */
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+.wrap-wide{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:64px 0}
+section+section{border-top:1px solid var(--hair)}
+.sec-dark{background:var(--navy);color:#EDE9E2;border-top:none}
+.sec-dark+section{border-top:none}
+.sec-tint{background:var(--paper-2)}
+
+/* ── 섹션 제목 ── */
+.eyebrow{
+  font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);margin:0 0 12px;font-weight:700;
+}
+h2{
+  font-size:25px;line-height:1.38;margin:0 0 10px;font-weight:700;letter-spacing:-.015em;
+}
+.sub{margin:0 0 34px;color:var(--muted);font-size:15px}
+.sec-dark .sub{color:rgba(237,233,226,.62)}
+
+/* ── 사진 공통 ── */
+figure{margin:0}
+.shot{
+  position:relative;overflow:hidden;background:var(--paper-2);
+  box-shadow:var(--shadow);
+}
+.shot img{width:100%;height:100%;object-fit:cover}
+
+/* ── 상단 고정 바 ── */
+.topbar{
+  position:sticky;top:0;z-index:30;
+  background:rgba(13,22,38,.92);
+  -webkit-backdrop-filter:saturate(160%) blur(10px);
+  backdrop-filter:saturate(160%) blur(10px);
+  border-bottom:1px solid rgba(196,138,66,.22);
+}
+.topbar .wrap-wide{display:flex;align-items:center;gap:16px;height:54px}
+.topbar .brand{color:#fff;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;letter-spacing:-.01em}
+/* min-width:0 이 없으면 메뉴가 안 줄어들어 페이지 전체가 화면보다 넓어진다(가로 잘림) */
+.topnav{display:flex;gap:16px;overflow-x:auto;-webkit-overflow-scrolling:touch;margin-left:auto;min-width:0}
+.topnav{scrollbar-width:none}
+.topnav::-webkit-scrollbar{display:none}
+.topnav a{
+  color:rgba(237,233,226,.78);text-decoration:none;font-size:14px;white-space:nowrap;padding:4px 0;
+  transition:color .2s;
+}
+.topnav a:hover{color:var(--gold-2)}
+
+/* ── 머리 (사진 위에 글) ── */
+.hero{
+  position:relative;isolation:isolate;
+  min-height:clamp(460px,76vh,660px);
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#fff;overflow:hidden;
+  background:var(--navy);
+}
+.hero-photo{position:absolute;inset:0;z-index:-2}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+/* 오버레이가 두 겹인 이유: 위/아래 어둠은 글을 읽히게 하고,
+   가운데 남색 막은 사진 색을 사이트 색(남색)으로 끌어당긴다. */
+.hero-veil{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg, rgba(13,22,38,.86) 0%, rgba(13,22,38,.58) 38%, rgba(13,22,38,.80) 100%),
+    linear-gradient(0deg, rgba(13,22,38,.42), rgba(13,22,38,.42));
+}
+/* width:100% + min-width:0 이 없으면 이 .wrap 이 flex 아이템이라
+   제 내용만큼 넓어져 좁은 화면에서 글이 줄바꿈되지 않고 오른쪽으로 잘린다. */
+.hero .wrap{width:100%;min-width:0;padding-top:64px;padding-bottom:64px}
+.hero .denom{
+  font-size:13px;letter-spacing:.2em;color:var(--gold-2);margin:0 0 8px;font-weight:600;
+}
+.hero .denom-en{
+  font-size:10.5px;letter-spacing:.18em;color:rgba(237,233,226,.55);margin:0 0 28px;
+}
+.hero h1{
+  font-size:46px;margin:0 0 20px;font-weight:800;letter-spacing:-.025em;line-height:1.16;
+  text-shadow:0 2px 24px rgba(0,0,0,.35);
+}
+.hero .rule{width:56px;height:2px;background:var(--gold);margin:0 auto 20px}
+.hero .slogan{font-size:17.5px;margin:0 0 16px;color:#F4F1EB;text-shadow:0 1px 16px rgba(0,0,0,.4)}
+.hero .motto{
+  font-size:14px;color:var(--gold-2);font-style:italic;margin:0;line-height:1.65;
+}
+
+/* ── 예배 안내 ── */
+.svc{list-style:none;margin:0;padding:0}
+.svc li{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;
+  padding:20px 0;border-bottom:1px solid var(--line);
+}
+.svc li:first-child{border-top:1px solid var(--line)}
+.svc .name{font-weight:700;font-size:17px;flex:1 1 auto;min-width:150px}
+.svc .time{font-size:17px;font-weight:700;color:var(--gold);white-space:nowrap}
+.svc .note{flex:1 1 100%;font-size:14px;color:var(--muted);margin:0}
+.badge{
+  display:inline-block;font-size:12px;font-weight:700;letter-spacing:.02em;
+  padding:3px 9px;border-radius:999px;vertical-align:middle;white-space:nowrap;
+}
+.badge-ask{background:#FDF3E3;color:#9A6A22;border:1px solid #E8CF9E}
+.badge-soon{background:#EEF0F4;color:#5A6577;border:1px solid #D5DAE2}
+.callout{
+  margin:30px 0 0;padding:20px 22px;border-left:3px solid var(--gold);
+  background:var(--paper-2);font-size:15px;
+}
+.callout p{margin:0 0 8px}
+.callout p:last-child{margin:0}
+.callout .q{color:var(--ink)}
+.callout .src{font-size:13px;color:var(--muted)}
+
+/* ── 온라인 예배 ── */
+.vlabel{margin:30px 0 10px;font-size:17px;font-weight:700;padding-left:13px;border-left:3px solid var(--gold)}
+.video{
+  position:relative;width:100%;padding-top:56.25%;
+  background:#000;border:1px solid rgba(196,138,66,.3);margin:0 0 22px;
+  box-shadow:0 26px 50px -30px rgba(0,0,0,.9);
+}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:700;font-size:15px;
+  padding:14px 22px;border-radius:4px;text-align:center;flex:1 1 auto;min-width:150px;
+  transition:background .2s,color .2s;
+}
+.btn-gold{background:var(--gold);color:#1B1206}
+.btn-gold:hover{background:var(--gold-2)}
+.btn-ghost{border:1px solid rgba(196,138,66,.55);color:var(--gold-2)}
+.btn-ghost:hover{background:rgba(196,138,66,.12)}
+.fineprint{font-size:13px;color:rgba(237,233,226,.55);margin:18px 0 0}
+
+/* ── 본문 글 ── */
+.lead{
+  font-size:19px;font-weight:700;color:var(--navy);margin:0 0 20px;letter-spacing:-.015em;
+}
+.prose p{margin:0 0 20px;font-size:16.5px}
+.prose p:last-child{margin:0}
+
+/* 교회 소개 위에 얹는 넓은 사진 띠 */
+.band{margin:0 0 40px}
+.band .shot{aspect-ratio:16/7}
+
+/* ── 갤러리 "교회의 시간들" ── */
+.grid{
+  display:grid;gap:12px;
+  grid-template-columns:repeat(2,1fr);
+  margin:0;padding:0;list-style:none;
+}
+.grid li{margin:0}
+.grid a{
+  display:block;position:relative;overflow:hidden;
+  aspect-ratio:4/3;background:var(--paper-2);
+  box-shadow:var(--shadow);
+}
+.grid img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .5s cubic-bezier(.2,.7,.3,1),filter .4s;
+}
+.grid a::after{
+  content:"";position:absolute;inset:0;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14);
+  background:linear-gradient(180deg,rgba(13,22,38,0) 60%,rgba(13,22,38,.28) 100%);
+  transition:background .4s;
+}
+.grid a:hover img,.grid a:focus-visible img{transform:scale(1.05)}
+.grid a:hover::after{background:linear-gradient(180deg,rgba(13,22,38,0) 40%,rgba(13,22,38,.42) 100%)}
+.grid a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+/* 2단(모바일)에서 9장은 마지막 한 장이 홀로 남는다.
+   첫 장을 가로로 펼쳐 머리 사진으로 쓰면 나머지 8장이 4줄로 딱 맞는다. */
+@media(max-width:699px){
+  .grid li:first-child{grid-column:span 2}
+  .grid li:first-child a{aspect-ratio:16/10}
+}
+
+/* 라이트박스 — 자바스크립트 없이 :target 만으로 연다 */
+.lb{
+  display:none;position:fixed;inset:0;z-index:60;
+  background:rgba(9,15,26,.94);
+  align-items:center;justify-content:center;padding:20px;
+}
+.lb:target{display:flex}
+.lb-bg{position:absolute;inset:0;cursor:zoom-out}
+.lb figure{position:relative;max-width:1000px;width:100%}
+.lb img{
+  width:100%;height:auto;max-height:86vh;object-fit:contain;
+  box-shadow:0 30px 70px -30px #000;
+}
+/* 화면 모서리에 고정한다. 사진 위에 붙여 두면 세로가 짧은 화면에서
+   버튼이 화면 밖으로 밀려 나가 닫을 수가 없다. */
+.lb-close{
+  position:fixed;top:14px;right:14px;
+  color:#EDE9E2;text-decoration:none;font-size:15px;font-weight:700;
+  letter-spacing:.06em;padding:9px 16px;
+  background:rgba(13,22,38,.72);
+  border:1px solid rgba(196,138,66,.5);border-radius:999px;
+}
+.lb-close:hover{background:rgba(196,138,66,.18);color:#fff}
+
+/* ── 목사님 소개 ── */
+.pastor-name{font-size:15px;color:var(--muted);margin:0 0 28px}
+.pastor-name b{color:var(--ink);font-size:17px}
+.portrait{margin:0 0 32px}
+.portrait .shot{aspect-ratio:4/3}
+.cv{margin:0}
+.cv dt{
+  font-size:11.5px;letter-spacing:.22em;color:var(--gold);font-weight:700;
+  margin:0 0 10px;padding-top:20px;border-top:1px solid var(--line);
+}
+.cv dt:first-of-type{padding-top:0;border-top:none}
+.cv dd{margin:0 0 22px}
+.cv ul{list-style:none;margin:0;padding:0}
+.cv li{padding:3px 0 3px 15px;position:relative;font-size:16px}
+.cv li::before{
+  content:"";position:absolute;left:0;top:14px;
+  width:5px;height:5px;background:var(--gold);border-radius:50%;
+}
+
+/* ── 목회 철학 ── */
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:8px}
+.pillar{border:1px solid rgba(196,138,66,.45);padding:26px 22px;background:rgba(255,255,255,.03)}
+.pillar h3{margin:0 0 10px;font-size:19px;color:var(--gold);letter-spacing:.14em}
+.pillar p{margin:0;font-size:15.5px;line-height:1.75}
+
+/* ── 로고 ── */
+.brand-logo{height:26px;width:auto;vertical-align:-6px;margin-right:7px}
+.hero-logo{height:74px;width:auto;margin:0 auto 14px;display:block;filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
+.slogan{margin:14px 0 0;font-size:15.5px;color:var(--gold);font-weight:700;letter-spacing:.02em}
+
+/* ── 오시는 길 ── */
+.way{margin:0 0 28px}
+.way h3{
+  font-size:17px;margin:0 0 8px;font-weight:700;
+  padding-left:13px;border-left:3px solid var(--gold);
+}
+.way p{margin:0;font-size:16px}
+.addr{
+  padding:20px;border:1px solid var(--line);background:var(--paper);
+  display:flex;flex-wrap:wrap;gap:14px;align-items:center;
+}
+.addr p{margin:0;flex:1 1 200px;font-size:16px}
+.addr .label{
+  display:block;font-size:11.5px;letter-spacing:.2em;color:var(--gold);font-weight:700;margin-bottom:4px;
+}
+
+/* ── 바닥글 ── */
+footer{background:var(--navy);color:#EDE9E2;padding:60px 0 40px}
+footer h2{font-size:21px}
+.contact{list-style:none;margin:0 0 30px;padding:0}
+.contact li{
+  padding:16px 0;border-bottom:1px solid rgba(196,138,66,.2);font-size:16px;
+}
+.contact li:first-child{border-top:1px solid rgba(196,138,66,.2)}
+.contact .k{
+  display:block;font-size:11.5px;letter-spacing:.2em;color:var(--gold);
+  font-weight:700;margin-bottom:5px;
+}
+.contact a{color:#EDE9E2;text-decoration:none;border-bottom:1px solid rgba(196,138,66,.5)}
+.contact .acct{font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.copy{
+  font-size:13px;color:rgba(237,233,226,.45);margin:30px 0 0;padding-top:22px;
+  border-top:1px solid rgba(196,138,66,.18);
+}
+
+/* ── 넓은 화면 ── */
+@media(min-width:700px){
+  .hero h1{font-size:64px}
+  .hero .slogan{font-size:20px}
+  h2{font-size:31px}
+  section{padding:96px 0}
+  .grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  .band{margin-bottom:52px}
+  /* 목사님: 사진 왼쪽 · 이력 오른쪽 */
+  .pastor-lay{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:44px;align-items:start}
+  .portrait{margin:0;position:sticky;top:82px}
+  .portrait .shot{aspect-ratio:3/4}
+}
+@media(min-width:1000px){
+  .hero h1{font-size:72px}
+  section{padding:112px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .grid img{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════ 상단 바 ════════ -->
+<header class="topbar">
+  <div class="wrap-wide">
+    <a class="brand" href="#top"><img src="사진/web/logo.png" alt="" class="brand-logo">큰샘교회</a>
+    <nav class="topnav">
+      <a href="#worship">예배 안내</a>
+      <a href="#online">온라인 예배</a>
+      <a href="#about">교회 소개</a>
+      <a href="#gallery">교회의 시간들</a>
+      <a href="#pastor">목사님 소개</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ════════ 1. 머리 ════════
+     글은 그대로 두고 배경만 사진으로 바꿨다.
+     사진: 사진/keunsaem1431_1747724217.jpg (예배당에 모인 회중) → web/hero
+     오버레이를 짙게 깐 이유 = 글 가독성 + 사진 색을 사이트 남색으로 통일. -->
+<div class="hero" id="top">
+  <picture class="hero-photo">
+    <source srcset="사진/web/hero.webp" type="image/webp">
+    <img src="사진/web/hero.jpg" alt="큰샘교회 예배당에 모여 함께 예배하는 성도들" width="1200" height="675" fetchpriority="high">
+  </picture>
+  <div class="hero-veil"></div>
+  <div class="wrap">
+    <p class="denom">기독교대한감리회</p>
+    <img src="사진/web/logo.png" alt="큰샘교회 로고" class="hero-logo">
+    <h1>큰샘교회</h1>
+    <div class="rule"></div>
+    <p class="slogan">하나님을 알고 세상속에서 하나님의 나라를 세워가는 교회</p>
+    <p class="slogan">&ldquo;한반도에 은혜의 강물이 흐르게 하라!&rdquo;</p>
+  </div>
+</div>
+
+<!-- ════════ 2. 예배 안내 ════════
+     ★시간은 확인된 것만 적는다. 확인 안 된 시간은 비워 둔다.
+        틀린 시간을 적는 것이 비워 두는 것보다 나쁘다. -->
+<section id="worship">
+  <div class="wrap">
+    <p class="eyebrow">예배</p>
+    <h2>예배 안내</h2>
+    <p class="sub">확인된 시간만 적었습니다. 나머지는 확인 후 채웁니다.</p>
+
+    <ul class="svc">
+      <li>
+        <span class="name">주일 오전 예배</span>
+        <span class="time">오전 11시</span>
+      </li>
+      <li>
+        <span class="name">온라인 새벽예배 (유튜브)</span>
+        <span class="badge badge-soon">준비 중</span>
+      </li>
+      <li>
+        <span class="name">주일 성경공부</span>
+        <span class="time">오후 1시 (점심 식사 후)</span>
+      </li>
+    </ul>
+
+    <div class="callout">
+      <p class="q">&ldquo;성경공부하고 싶으신 분은 누구나 신청하세요^^&rdquo;<br>교재: 어! 성경이 읽어지네</p>
+      <p class="src">모이는 시간 &mdash; 주일 오후 1시 (점심 식사 후)</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 3. 온라인 예배 ════════
+     채널 ID UC6kFMamsryfHU6mB61vtttw 는 현 사이트 구독 버튼에서 가져왔고,
+     @큰샘감리교회 핸들 페이지의 externalId 와 대조해 같은 채널임을 확인했다.
+     UU… 는 그 채널의 '업로드' 재생목록이라 새 영상이 올라오면 자동으로 최신이 뜬다. -->
+<section id="online" class="sec-dark">
+  <div class="wrap">
+    <p class="eyebrow">온라인 예배</p>
+    <h2>온라인 예배</h2>
+    <p class="sub">교회에 오시기 어려우면 유튜브로 함께 드릴 수 있습니다.</p>
+
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/videoseries?list=PLRKz01U8iI5IuYm8JnLfkFt7JzxVyiqZW"
+        title="큰샘교회 유튜브 주일예배 다시보기"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+
+    <h3 class="vlabel">설교 쇼츠</h3>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLdPO76K4HcRA"
+        title="큰샘교회 설교 쇼츠" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <h3 class="vlabel">아동부 예배 &mdash; 하나님 나라 (87편)</h3>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLRKz01U8iI5LEosjtRdeO9PMiKXB0yPhO"
+        title="큰샘교회 아동부 하나님 나라" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <h3 class="vlabel">아동부 예배 &mdash; 성경탐험 (70편)</h3>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/videoseries?list=PLRKz01U8iI5JdSAHTMKHmC5yfFMd7_4kg"
+        title="큰샘교회 아동부 성경탐험" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="btns">
+      <a class="btn btn-gold" href="https://www.youtube.com/channel/UC6kFMamsryfHU6mB61vtttw?sub_confirmation=1">유튜브 구독하기</a>
+      <a class="btn btn-ghost" href="https://www.youtube.com/channel/UC6kFMamsryfHU6mB61vtttw">채널 바로가기</a>
+    </div>
+
+    <p class="fineprint">영상이 보이지 않으면 &lsquo;채널 바로가기&rsquo;를 눌러 유튜브에서 봐 주세요.</p>
+  </div>
+</section>
+
+<!-- ════════ 4. 교회 소개 ════════
+     ★현 사이트 「교회소개」 원문 그대로. 한 글자도 고치지 않았다.
+       사진만 위에 얹었다: 사진/keunsaem1431_1748178532.jpg → web/about -->
+<section id="about">
+  <div class="wrap-wide">
+    <figure class="band">
+      <div class="shot">
+        <picture>
+          <source srcset="사진/web/about.webp" type="image/webp">
+          <img src="사진/web/about.jpg" alt="예배당 십자가 앞에 함께 선 교회 가족들" width="1000" height="750" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </figure>
+  </div>
+  <div class="wrap">
+    <p class="eyebrow">교회 소개</p>
+    <h2>교회 소개</h2>
+    <p class="sub">저희 교회를 소개해드립니다.</p>
+
+    <div class="prose">
+      <p class="lead">&ldquo;큰샘감리교회&rdquo;</p>
+      <p>말씀과 기도로 세워진 이 공동체는 예수 그리스도의 사랑을 삶으로 실천하며, 지역사회와 열방을 섬기고자 세워졌습니다.</p>
+      <p>우리는 성경 중심의 제자훈련과 깊이 있는 말씀 연구를 통해, 성도 한 사람 한 사람이 하나님의 말씀 위에 굳건히 서도록 돕고 있습니다. 말씀 안에 뿌리내린 한 사람이 변화될 때, 가정과 교회, 세상 가운데 하나님의 나라가 확장된다고 믿기 때문입니다.</p>
+      <p>큰샘교회는 단순한 예배의 공간을 넘어, 삶의 모든 자리에서 복음을 살아내는 &lsquo;살아있는 교회&rsquo;가 되기를 소망합니다. 가정과 일터, 선교지에서 하나님의 뜻을 이루어가는 이 거룩한 여정에 여러분을 초대합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 4.5 목회 철학 (오너 구술 2026-08-06 · 어휘 보존, 문장만 정리) ════════ -->
+<section id="philosophy" class="sec-dark">
+  <div class="wrap">
+    <p class="eyebrow">목회 철학</p>
+    <h2>우리 교회가 붙드는 네 가지</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>말씀</h3>
+        <p>성경의 무오함을 믿습니다. 성경을 가르치고, 성경을 가르치는 사람을 세우는 교회입니다.</p>
+      </div>
+      <div class="pillar">
+        <h3>예배</h3>
+        <p>예배에 목숨을 거는 교회입니다. 예배를 통해 하나님을 만나고, 하나님의 음성을 듣고, 순종합니다.</p>
+      </div>
+      <div class="pillar">
+        <h3>선교</h3>
+        <p>주님의 지상명령인 선교에 동참하여 하나님의 나라를 확장하는 교회입니다.</p>
+      </div>
+      <div class="pillar">
+        <h3>삶</h3>
+        <p>성경적 세계관으로 삶이 변화되는 교회입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════ 5. 교회의 시간들 (갤러리 · 신설) ════════
+     교회가 가진 사진만 쓴다. 캡션 글자는 달지 않았다 —
+     날짜·행사 이름을 지어내지 않기 위해서다(★사역콘텐츠_지침 1-3).
+     설명은 alt 에만 두고, 사진에 실제로 보이는 것만 적었다.
+     라이트박스는 자바스크립트 없이 CSS :target 으로 연다. 썸네일과 확대본이
+     같은 파일이라 확대해도 추가로 내려받지 않는다. -->
+<section id="gallery" class="sec-tint">
+  <div class="wrap-wide">
+    <p class="eyebrow">사진</p>
+    <h2>교회의 시간들</h2>
+    <p class="sub">사진을 누르시면 크게 보실 수 있습니다.</p>
+  </div>
+  <div class="wrap-wide">
+    <ul class="grid">
+      <li>
+        <a href="#g1" aria-label="성탄 장식 앞에 둘러앉은 성도들 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g1.webp" type="image/webp">
+            <img src="사진/web/g1.jpg" alt="성탄 장식 앞에 둘러앉은 성도들" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#g2" aria-label="예배당 앞에서 꽃을 들고 선 어린이들 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g2.webp" type="image/webp">
+            <img src="사진/web/g2.jpg" alt="예배당 앞에서 꽃을 들고 선 어린이들" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#g3" aria-label="거리에서 전도지를 들고 함께 선 성도들과 아이들 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g3.webp" type="image/webp">
+            <img src="사진/web/g3.jpg" alt="거리에서 전도지를 들고 함께 선 성도들과 아이들" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#g4" aria-label="십자가 앞에 나란히 선 어른들과 아이들 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g4.webp" type="image/webp">
+            <img src="사진/web/g4.jpg" alt="십자가 앞에 나란히 선 어른들과 아이들" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#g5" aria-label="책자를 손에 들고 함께 선 성도들 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g5.webp" type="image/webp">
+            <img src="사진/web/g5.jpg" alt="책자를 손에 들고 함께 선 성도들" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#g6" aria-label="교회에서 함께 음식을 나누는 모습 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g6.webp" type="image/webp">
+            <img src="사진/web/g6.jpg" alt="교회에서 함께 음식을 나누는 모습" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#g7" aria-label="추수감사예배 강단에 놓인 과일과 곡식 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g7.webp" type="image/webp">
+            <img src="사진/web/g7.jpg" alt="추수감사예배 강단에 놓인 과일과 곡식" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#g8" aria-label="예배당 앞에서 순서를 맡은 어린이들 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g8.webp" type="image/webp">
+            <img src="사진/web/g8.jpg" alt="예배당 앞에서 순서를 맡은 어린이들" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+      <li>
+        <a href="#g9" aria-label="꽃다발과 상패를 들고 함께 선 성도들 — 크게 보기">
+          <picture>
+            <source srcset="사진/web/g9.webp" type="image/webp">
+            <img src="사진/web/g9.jpg" alt="꽃다발과 상패를 들고 함께 선 성도들" width="900" height="675" loading="lazy" decoding="async">
+          </picture>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 라이트박스 (화면 밖에 숨어 있다가 :target 일 때만 뜬다) -->
+<div class="lb" id="g1" role="dialog" aria-label="성탄 장식 앞에 둘러앉은 성도들">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g1.webp" type="image/webp">
+      <img src="사진/web/g1.jpg" alt="성탄 장식 앞에 둘러앉은 성도들" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<div class="lb" id="g2" role="dialog" aria-label="예배당 앞에서 꽃을 들고 선 어린이들">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g2.webp" type="image/webp">
+      <img src="사진/web/g2.jpg" alt="예배당 앞에서 꽃을 들고 선 어린이들" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<div class="lb" id="g3" role="dialog" aria-label="거리에서 전도지를 들고 함께 선 성도들과 아이들">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g3.webp" type="image/webp">
+      <img src="사진/web/g3.jpg" alt="거리에서 전도지를 들고 함께 선 성도들과 아이들" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<div class="lb" id="g4" role="dialog" aria-label="십자가 앞에 나란히 선 어른들과 아이들">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g4.webp" type="image/webp">
+      <img src="사진/web/g4.jpg" alt="십자가 앞에 나란히 선 어른들과 아이들" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<div class="lb" id="g5" role="dialog" aria-label="책자를 손에 들고 함께 선 성도들">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g5.webp" type="image/webp">
+      <img src="사진/web/g5.jpg" alt="책자를 손에 들고 함께 선 성도들" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<div class="lb" id="g6" role="dialog" aria-label="교회에서 함께 음식을 나누는 모습">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g6.webp" type="image/webp">
+      <img src="사진/web/g6.jpg" alt="교회에서 함께 음식을 나누는 모습" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<div class="lb" id="g7" role="dialog" aria-label="추수감사예배 강단에 놓인 과일과 곡식">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g7.webp" type="image/webp">
+      <img src="사진/web/g7.jpg" alt="추수감사예배 강단에 놓인 과일과 곡식" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<div class="lb" id="g8" role="dialog" aria-label="예배당 앞에서 순서를 맡은 어린이들">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g8.webp" type="image/webp">
+      <img src="사진/web/g8.jpg" alt="예배당 앞에서 순서를 맡은 어린이들" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<div class="lb" id="g9" role="dialog" aria-label="꽃다발과 상패를 들고 함께 선 성도들">
+  <a class="lb-bg" href="#gallery" aria-label="닫기"></a>
+  <figure>
+    <a class="lb-close" href="#gallery">닫기 &times;</a>
+    <picture>
+      <source srcset="사진/web/g9.webp" type="image/webp">
+      <img src="사진/web/g9.jpg" alt="꽃다발과 상패를 들고 함께 선 성도들" width="900" height="675" loading="lazy" decoding="async">
+    </picture>
+  </figure>
+</div>
+
+<!-- ════════ 6. 목사님 소개 ════════
+     ★현 사이트 「목사님소개」 원문 그대로 (학력·수료·활동 항목 순서까지).
+       오너 확정(2026-08-06): 이중직 목회 명시 + LG 하이케어솔루션 팀장 표기 유지.
+       사진만 추가: 사진/keunsaem1431_1748268460.jpg → web/pastor
+       ※alt 에 이름을 적지 않았다 — 사진 속 인물이 누구인지 확인받지 않았다. -->
+<section id="pastor">
+  <div class="wrap-wide">
+    <p class="eyebrow">담임목사</p>
+    <h2>목사님 소개</h2>
+    <p class="sub">저희교회 담임목사님을 소개해드립니다.</p>
+
+    <div class="pastor-lay">
+      <figure class="portrait">
+        <div class="shot">
+          <picture>
+            <source srcset="사진/web/pastor.webp" type="image/webp">
+            <img src="사진/web/pastor.jpg" alt="십자가 아래에서 성경을 펴고 말씀을 가르치는 모습" width="1000" height="750" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </figure>
+
+      <div>
+        <p class="lead">&ldquo;말씀과 삶이 일치하는 목회자&rdquo;</p>
+        <p class="pastor-name">담임목사 <b>서동우</b></p>
+
+        <dl class="cv">
+          <dt>학력</dt>
+          <dd>
+            <ul>
+              <li>감리교 신학대학교 신학과</li>
+              <li>감리교 신학대학원 실천신학</li>
+            </ul>
+          </dd>
+
+          <dt>수료</dt>
+          <dd>
+            <ul>
+              <li>목회자예수전도학교(PDTS), 목회자성경연구학교(PSBS)</li>
+              <li>어! 성경이 읽어지네 전문강사 (생터성경사역원)</li>
+              <li>미션퍼스펙티브 강사과정(선교한국)</li>
+            </ul>
+          </dd>
+
+          <dt>활동</dt>
+          <dd>
+            <ul>
+              <li>목회자 성경 연구 학교 간사</li>
+              <li>생터성경사역원 서서울 남지부 지부장</li>
+              <li>어! 성경이 읽어지네 전문 강사</li>
+              <li>이중직 목회 &mdash; LG 하이케어솔루션 팀장</li>
+              <li>큰샘교회 담임목사</li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 7. 오시는 길 ════════
+     ★현 사이트 「찾아오시는 길」 원문 그대로. 길 설명을 새로 쓰지 않았다.
+       지도는 이미지를 붙이지 않고 카카오맵 '검색' 링크로 뺐다(외부 스크립트 금지 규칙). -->
+<section id="visit" class="sec-tint">
+  <div class="wrap">
+    <p class="eyebrow">오시는 길</p>
+    <h2>오시는 길</h2>
+    <p class="sub">저희교회를 찾아오시는 길을 안내해드립니다</p>
+
+    <div class="way">
+      <h3>오시는 길 (자가용)</h3>
+      <p>네비게이션에 &lsquo;창의경영고등학교&rsquo; 검색<br>
+         학교내에 주차가 가능합니다. 주차하시고 교문으로 바로 내려오시면 큰샘교회가 보입니다.</p>
+    </div>
+
+    <div class="way">
+      <h3>오시는 길 (대중교통)</h3>
+      <p>1호선 석수역 1번출구 나오셔서 1번 마을버스타시고 &lsquo;창의경영고등학교&rsquo;하차하시면 됩니다.</p>
+    </div>
+
+    <div class="video" style="margin-bottom:18px">
+      <iframe src="https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EA%B4%91%EB%AA%85%EC%8B%9C%20%EA%B8%B0%EC%95%84%EB%A1%9C%2023&output=embed&z=17"
+        title="큰샘교회 오시는 길 지도" loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+
+    <div class="addr">
+      <p><span class="label">주소</span>경기 광명시 기아로 23 (소하동) 4층</p>
+      <a class="btn btn-gold" href="https://map.naver.com/p/search/%ED%81%B0%EC%83%98%EA%B0%90%EB%A6%AC%EA%B5%90%ED%9A%8C">네이버 지도</a>
+      <a class="btn btn-ghost" href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%20%EA%B4%91%EB%AA%85%EC%8B%9C%20%EA%B8%B0%EC%95%84%EB%A1%9C%2023">카카오맵</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ 8. 바닥글 ════════
+     ★전화번호는 현 사이트에 이미 공개된 010-2534-0407 그대로만 쓴다. 새 연락처 추가 금지. -->
+<footer>
+  <div class="wrap">
+    <h2>큰샘교회</h2>
+    <p class="sub">기독교대한감리회 &nbsp;|&nbsp; 담임목사 서동우</p>
+
+    <ul class="contact">
+      <li>
+        <span class="k">TEL</span>
+        <a href="tel:01025340407">010-2534-0407</a>
+      </li>
+      <li>
+        <span class="k">ADDRESS</span>
+        경기 광명시 기아로 23 (소하동) 4층
+      </li>
+      <li>
+        <span class="k">온라인 헌금</span>
+        <span class="acct">기업은행 318-060764-04-014 (예금주: 큰샘감리교회)</span>
+      </li>
+      <li>
+        <span class="k">카카오톡 상담</span>
+        <a href="https://open.kakao.com/o/s5G6vwDh">카카오 오픈채팅으로 대화하기</a>
+        <!-- 현 사이트 설명: "목사님과 카카오톡 채팅을 하실 수 있는 공간입니다." -->
+      </li>
+      <li>
+        <span class="k">유튜브</span>
+        <a href="https://www.youtube.com/channel/UC6kFMamsryfHU6mB61vtttw">@큰샘감리교회</a>
+      </li>
+    </ul>
+
+    <p class="copy">Copyrights &copy; 큰샘교회. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
