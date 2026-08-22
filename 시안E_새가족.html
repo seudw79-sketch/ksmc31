@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>큰샘교회</title>
-<meta name="description" content="기독교대한감리회 큰샘교회 · 주일예배 오전 11시 · 경기 광명시 기아로 23">
+<title>새가족 안내 · 큰샘교회</title>
+<meta name="description" content="큰샘교회에 처음 오시는 분께">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -42,10 +42,8 @@ a{color:inherit;text-decoration:none}
 .bden .l2{font-size:9px;color:#9AA6B2;font-weight:600}
 .bden i{font-style:normal}
 @media(max-width:640px){.bbar,.bden{display:none}}
-.bcol{display:flex;flex-direction:column;align-items:center;line-height:1.15;text-align:center}
+.bcol{display:flex;flex-direction:column;line-height:1.15}
 .denom{font-size:10.5px;font-weight:700;letter-spacing:.02em;color:#7B8494}
-.bcol{letter-spacing:.14em;text-indent:.14em}
-.bcol .denom{letter-spacing:.02em;text-indent:0}
 /* ★메뉴가 7개다. 어떤 너비에서도 **글자 중간에서 줄바꿈되지 않게** 한다 —
    760px 에서 "큰샘교/회", "교회소/개" 로 쪼개진 것을 실측하고 고쳤다.
    안 들어가면 줄을 바꾸는 대신 **가로로 밀어 본다**(끝을 흐려 더 있음을 알린다). */
@@ -70,35 +68,6 @@ a{color:inherit;text-decoration:none}
 }
 
 /* ── 히어로 ── */
-.hero2{display:grid;grid-template-columns:1fr 1.15fr;background:#FBF9F4;min-height:66svh;
-  position:relative;overflow:hidden}
-/* 담임목사 강의 사진을 흑백·저농도로 깔아 배경 질감으로 쓴다 — 글 가독을 위해 밝은 스크림을 겹친다 */
-.hero2::before{content:"";position:absolute;inset:0;
-  background:url("사진/web/pastor.jpg") 100% 46%/112% auto no-repeat;
-  filter:grayscale(1);opacity:.68}
-.hero2::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,rgba(251,249,244,.55),rgba(251,249,244,.04))}
-.hero2 .l,.hero2 .r{position:relative;z-index:2}
-.hero2 .btn-o{background:#fff;color:var(--navy);border:1px solid #BFDCEA;text-shadow:none}
-.hero2 .btn-o:hover{background:#EAF4FA}
-.hero2 .l{padding:clamp(40px,7vw,84px) clamp(22px,5vw,64px);display:flex;flex-direction:column;justify-content:center}
-.hero2 .k{margin:0;font-size:12px;letter-spacing:.32em;color:#C9A961;font-weight:700}
-.hero2 h1{font-family:'Gowun Batang','Noto Serif KR',serif;font-size:clamp(30px,5.4vw,46px);
-  margin:14px 0 12px;color:#12303F;line-height:1.28;font-weight:700;letter-spacing:-.01em}
-.hero2 .d{margin:0 0 26px;color:var(--mute);font-size:clamp(15px,2.4vw,16.5px);line-height:1.85}
-.hero2 .g{display:flex;gap:10px;flex-wrap:wrap}
-
-.hero2 .r{position:relative;min-height:420px}
-.hero2 .ph{position:absolute;border-radius:16px;overflow:hidden;
-  box-shadow:0 12px 30px rgba(20,40,60,.16)}
-.hero2 .ph.big{left:2%;top:7%;width:64%;height:86%}
-.hero2 .ph.s1{right:2%;top:9%;width:33%;height:38%;border:4px solid #fff;z-index:2}
-.hero2 .ph.s2{right:4%;bottom:8%;width:30%;height:34%;border:4px solid #fff;z-index:2}
-.hero2 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-/* 액자 속 사진 회전 — 첫 장은 고정 밑layer, 위에 두 장이 6초 간격으로 얹혔다 사라진다(18초 순환) */
-.hero2 .rot{position:absolute;inset:0;opacity:0;animation:pf 18s linear infinite}
-@keyframes pf{0%{opacity:0}3%{opacity:1}33%{opacity:1}39%{opacity:0}100%{opacity:0}}
-@media(max-width:820px){.hero2{grid-template-columns:1fr}.hero2 .r{min-height:340px;margin:0 4px 6px}}
 .hero{position:relative;min-height:74svh;display:flex;align-items:flex-end;
   color:#fff;overflow:hidden;background:var(--sky)}
 /* ★jpg 폴백을 위해 img 를 <picture> 로 감쌌더니 '.hero>img' 가 빗나가 히어로가 통째로 깨졌다(실측).
@@ -249,19 +218,6 @@ a{color:inherit;text-decoration:none}
 .sec-head p{margin:0;color:var(--mute);font-size:14.5px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:860px){.cards{grid-template-columns:1fr}}
-.tdgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0 0}
-@media(max-width:860px){.tdgrid{grid-template-columns:1fr}}
-.tdcell{border:1px solid var(--line);border-radius:var(--r);background:var(--paper);overflow:hidden}
-.tdcell .cap{padding:14px 18px;border-bottom:1px solid var(--line)}
-.tdcell .cap b{display:block;font-size:16px;color:var(--navy);font-weight:800;letter-spacing:-.02em}
-.tdcell .cap span{font-size:13.5px;color:var(--mute)}
-.tdcell .video{border-radius:0}
-.gallery{padding:clamp(40px,7vw,72px) 0}
-.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-@media(max-width:720px){.ggrid{grid-template-columns:repeat(2,1fr)}}
-.ggrid a{display:block;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
-.ggrid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .35s}
-.ggrid a:hover img{transform:scale(1.04)}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
   padding:22px 22px 20px;display:flex;flex-direction:column;gap:9px;
   transition:box-shadow .18s,transform .18s,border-color .18s}
@@ -391,109 +347,30 @@ footer .copy{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,
 </header>
 
 
-<section class="hero2">
-  <div class="l fade in">
-    <p class="k">KEUNSAEM CHURCH</p>
-    <h1>함께 걷는<br>믿음의 가족</h1>
-    <p class="d">기독교대한감리회 큰샘교회는<br>말씀과 기도로 세워지는 공동체입니다.</p>
-    <div class="g">
-      <a class="btn btn-g" href="시안E_예배안내.html#visit">오시는 길</a>
-      <a class="btn btn-o" href="시안E_온라인예배.html">온라인 예배</a>
-      <a class="btn btn-o" href="시안E_주보.html">온라인 주보</a>
-    </div>
-  </div>
-  <div class="r">
-    <div class="ph big"><img src="사진/web/about2.jpg" alt="정자 앞에 함께 선 큰샘교회 가족들" fetchpriority="high">
-      <img class="rot" style="animation-delay:6s" src="사진/web/c1c.jpg" alt="성찬을 나누는 성도들" loading="lazy">
-      <img class="rot" style="animation-delay:12s" src="사진/web/c2b.jpg" alt="탁자에 둘러앉아 공부하는 성도들" loading="lazy"></div>
-    <div class="ph s1"><img src="사진/web/c3a.jpg" alt="성탄절에 모인 교회 가족들">
-      <img class="rot" style="animation-delay:6s" src="사진/web/g8.jpg" alt="성탄 순서를 맡은 어린이들" loading="lazy">
-      <img class="rot" style="animation-delay:12s" src="사진/web/g4.jpg" alt="십자가 앞 가족" loading="lazy"></div>
-    <div class="ph s2"><img src="사진/web/g2.jpg" alt="카네이션을 들고 찬양하는 어린이들">
-      <img class="rot" style="animation-delay:6s" src="사진/web/c4a.jpg" alt="어깨띠를 두르고 거리로 나선 성도" loading="lazy">
-      <img class="rot" style="animation-delay:12s" src="사진/web/g6.jpg" alt="음식을 나누는 교제" loading="lazy"></div>
-  </div>
+<section class="page-head">
+  <div class="wrap"><p class="kicker">처음 오시는 분께</p><h1>새가족 안내</h1>
+  <p>따로 신청하실 것이 없습니다. 예배 시간에 오시면 됩니다.</p></div>
 </section>
-
-<section class="actions">
-  <div class="wrap">
-    <div class="t"><span><b>주일예배</b> 오전 11시</span><span><b>성경공부</b> 주일 오후 1시</span><span><b>아침예배</b> 오전 7시</span></div>
+<section class="body"><div class="wrap">
+  <div class="block fade">
+    <h3>언제 오면 되나요</h3>
+    <p>주일 오전 11시 예배로 오시면 됩니다.</p>
+    <p class="note">다른 예배&middot;모임 시간은 <a href="시안E_예배안내.html"><b>예배 안내</b></a>에 있습니다.</p>
   </div>
-</section>
-
-<section class="week">
-  <div class="wrap">
-    <div class="sec-head fade">
-      <h2>이번 주 큰샘교회</h2>
-      <p>매주 갱신됩니다</p>
-    </div>
-    <div class="cards">
-      <a class="card fade" id="sm-link" href="https://www.youtube.com/channel/UC6kFMamsryfHU6mB61vtttw">
-        <span class="tag">주일 설교</span>
-        <span class="t" id="sm-title">생명의 성령의 법이 나를 살린다</span>
-        <span class="s" id="sm-date">2026-08-23 &middot; 로마서 8장 1-11절</span>
-        <span class="go">설교 영상 보기 &nearr;</span>
-      </a>
-      <a class="card fade" id="jb-link" href="jubo.html">
-        <span class="tag">주보</span>
-        <span class="t" id="jb-title">8월 3주차 주보</span>
-        <span class="s">이번 주 예배 순서와 소식</span>
-        <span class="go">주보 보기 &nearr;</span>
-      </a>
-      <a class="card fade" href="시안E_온라인예배.html">
-        <span class="tag">아침 QT</span>
-        <span class="t">아침 QT 예배</span>
-        <span class="s">매일 아침 7시 말씀묵상으로 하루를 엽니다</span>
-        <span class="go">예배 참여하기 &nearr;</span>
-      </a>
-    </div>
-    <div class="tdgrid fade">
-      <div class="tdcell">
-        <div class="cap"><b>어? 성경이 읽어지네 &mdash; 이애실 사모 강의</b>
-          <span id="lc-ref">애실쌤과 365성경읽기 &middot; 생터성경사역원</span></div>
-        <div class="video"><iframe id="lc-video" title="이애실 사모 강의" loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <div class="td-nav"><button type="button" id="lc-prev">&larr; 이전 강의</button>
-          <span id="lc-pos"></span>
-          <button type="button" id="lc-next">다음 강의 &rarr;</button></div>
-      </div>
-      <div class="tdcell">
-        <div class="cap"><b>오늘의 통독 &mdash; <span id="td-day">불러오는 중</span></b>
-          <span id="td-ref">잠시만요</span></div>
-        <div class="video" id="td-video-wrap"><iframe id="td-video" title="오늘의 통독" loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <div class="cap" id="td-fallback" hidden>
-          <b>오늘 회차를 불러오지 못했습니다</b>
-          <span><a href="시안E_아카데미.html">성경 아카데미에서 보기 &rarr;</a></span></div>
-        <div class="td-nav"><button type="button" id="td-prev">&larr; 이전 회차</button>
-          <span id="td-pos"></span>
-          <button type="button" id="td-next">다음 회차 &rarr;</button></div>
-      </div>
-    </div>
+  <div class="block fade">
+    <h3>어디로 가면 되나요</h3>
+    <p>경기 광명시 기아로 23 (소하동) 4층.</p>
+    <p class="note">자가용&middot;대중교통 안내는 <a href="시안E_예배안내.html#visit"><b>오시는 길</b></a>에 있습니다.</p>
   </div>
-</section>
-
-<section class="gallery">
-  <div class="wrap">
-    <div class="sec-head fade">
-      <h2>큰샘교회의 모습</h2>
-      <p><a href="시안E_교회소개.html" style="color:inherit">교회소개에서 더 보기 &rarr;</a></p>
+  <div class="block fade">
+    <h3>물어볼 것이 있어요</h3>
+    <p>카카오 오픈채팅으로 목사님과 바로 이야기하실 수 있습니다.</p>
+    <div class="cta" style="margin-top:12px">
+      <a class="btn btn-g" href="https://open.kakao.com/o/s5G6vwDh" target="_blank" rel="noopener">오픈채팅으로 묻기</a>
     </div>
-    <div class="ggrid fade">
-      <a href="시안E_교회소개.html"><img src="사진/web/g3.jpg" alt="전도 띠를 두르고 거리로 나선 성도들과 아이들" loading="lazy"></a>
-      <a href="시안E_교회소개.html"><img src="사진/web/c2a.jpg" alt="전도지를 들고 함께한 성도들" loading="lazy"></a>
-      <a href="시안E_교회소개.html"><img src="사진/web/c1a.jpg" alt="성탄 장식 아래 함께 드리는 예배" loading="lazy"></a>
-      <a href="시안E_교회소개.html"><img src="사진/web/c3a.jpg" alt="성탄절에 모인 교회 가족들" loading="lazy"></a>
-      <a href="시안E_교회소개.html"><img src="사진/web/g7.jpg" alt="추수감사절 예배단" loading="lazy"></a>
-      <a href="시안E_교회소개.html"><img src="사진/web/g8.jpg" alt="성탄 순서를 맡은 어린이들" loading="lazy"></a>
-      <a href="시안E_교회소개.html"><img src="사진/web/c4c.jpg" alt="함께 만들며 교제하는 시간" loading="lazy"></a>
-      <a href="시안E_교회소개.html"><img src="사진/web/c3b.jpg" alt="함께 모인 성도들" loading="lazy"></a>
-      <a href="시안E_교회소개.html"><img src="사진/web/hero.jpg" alt="큰샘교회 온 가족" loading="lazy"></a>
-    </div>
+    <p class="note" style="margin-top:14px">★이 페이지는 이름&middot;연락처를 입력받지 않습니다. 개인정보를 한 글자도 받지 않습니다.</p>
   </div>
-</section>
+</div></section>
 
 
 <footer>
@@ -520,61 +397,6 @@ footer .copy{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll('.fade').forEach(function(el){io.observe(el)});
-})();
-
-/* 이번 주 블록 — 주보 생성기가 latest.json 만 덮어쓰면 화면이 갱신된다(빌드 도구 없음). */
-fetch('latest.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).then(function(d){
-  if(!d) return;
-  function set(id,v){var el=document.getElementById(id); if(el&&v) el.textContent=v;}
-  function link(id,v){var el=document.getElementById(id); if(el&&v) el.href=v;}
-  set('sm-title',d.설교_제목); set('sm-date',d.설교_날짜); link('sm-link',d.설교_링크);
-  set('jb-title',d.주보_제목); link('jb-link',d.주보_링크);
-}).catch(function(){});
-
-/* 오늘의 통독/강의 — 회차 = 연중 일수(KST). 윤년 2/29는 59일차 유지(안 하면 그 해 내내 어긋난다).
-   왼쪽 강의 칸은 기본표(공개 직강)만 보고, 오른쪽 통독 칸은 덮어쓰기(오너 시리즈)가 이긴다.
-   두 칸의 이전/다음은 서로 독립이다. */
-(function(){
-  function 오늘회차(){
-    var kst=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'}));
-    var 연=kst.getFullYear(), 첫날=new Date(연,0,1);
-    var n=Math.floor((new Date(연,kst.getMonth(),kst.getDate())-첫날)/86400000)+1;
-    var 윤=(연%4===0&&연%100!==0)||(연%400===0);
-    if(윤&&n>59)n-=1;
-    return Math.min(365,Math.max(1,n));
-  }
-  var 표=null,덮=null,강의일=오늘회차(),통독일=오늘회차();
-  function 회차(n){return 표&&표.회차&&표.회차[n-1];}
-  function 강의그리기(){
-    var r=회차(강의일); if(!r)return;
-    var f=document.getElementById('lc-video'),pos=document.getElementById('lc-pos'),ref=document.getElementById('lc-ref');
-    if(f)f.src='https://www.youtube.com/embed/'+r.영상;
-    if(pos)pos.textContent=r.일+'일차 / 365';
-    if(ref)ref.textContent=(r.범위||'')+' \u00b7 생터성경사역원';
-  }
-  function 통독그리기(){
-    var r=회차(통독일);
-    var 날=document.getElementById('td-day'),참=document.getElementById('td-ref');
-    var 틀=document.getElementById('td-video-wrap'),폴=document.getElementById('td-fallback'),pos=document.getElementById('td-pos');
-    if(!r){ if(틀)틀.hidden=true; if(폴)폴.hidden=false; if(날)날.textContent='준비 중'; if(참)참.textContent=''; return; }
-    if(날)날.textContent=r.일+'일차'; if(참)참.textContent=r.범위||'';
-    if(pos)pos.textContent=r.일+'일차 / 365';
-    var id=(덮&&덮.덮어쓰기&&덮.덮어쓰기[String(r.일)])||r.영상;
-    var f=document.getElementById('td-video');
-    if(id&&f){ f.src='https://www.youtube.com/embed/'+id; if(틀)틀.hidden=false; if(폴)폴.hidden=true; }
-    else { if(틀)틀.hidden=true; if(폴)폴.hidden=false; }
-  }
-  function 묶기(pid,nid,이동){
-    var p=document.getElementById(pid),n=document.getElementById(nid);
-    if(p)p.addEventListener('click',function(){이동(-1)});
-    if(n)n.addEventListener('click',function(){이동(1)});
-  }
-  묶기('lc-prev','lc-next',function(d){강의일=((강의일-1+d)%365+365)%365+1;강의그리기();});
-  묶기('td-prev','td-next',function(d){통독일=((통독일-1+d)%365+365)%365+1;통독그리기();});
-  Promise.all([
-    fetch('통독_365.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}),
-    fetch('통독_영상_덮어쓰기.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})
-  ]).then(function(v){표=v[0];덮=v[1];강의그리기();통독그리기();});
 })();
 </script>
 </body>
