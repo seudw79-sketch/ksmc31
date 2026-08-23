@@ -392,7 +392,7 @@ footer .copy{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,
    PC·모바일 어디서도 잘림이 달라지지 않는다. 자바스크립트가 죽어도 첫 장은 보인다. */
 .rotwrap{position:relative}
 .rotwrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  opacity:0;transition:opacity 1.1s ease-in-out}
+  opacity:0;transition:opacity .8s ease-in-out}
 .rotwrap img.on{opacity:1}
 @media (prefers-reduced-motion: reduce){.rotwrap img{transition:none}}
 </style>
@@ -602,7 +602,7 @@ fetch('latest.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():nu
 </script>
 
 <script>
-/* 대문 사진 6초마다 교체 · 자바스크립트 실패해도 첫 장은 CSS 로 보인다 */
+/* 대문 사진 3초마다 교체(2026-08-23 오너 지정 · 페이드 0.8초로 함께 줄임) · 자바스크립트 실패해도 첫 장은 CSS 로 보인다 */
 (function(){
   var w=document.querySelector('.rotwrap'); if(!w) return;
   var imgs=w.querySelectorAll('img'); if(imgs.length<2) return;
@@ -611,7 +611,7 @@ fetch('latest.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():nu
     imgs[i].classList.remove('on');
     i=(i+1)%imgs.length;
     imgs[i].classList.add('on');
-  }, 6000);
+  }, 3000);
 })();
 </script>
 </body>
