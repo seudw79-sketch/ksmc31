@@ -477,9 +477,7 @@ footer .copy{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,
         <div class="video" id="td-video-wrap"><iframe id="td-video" title="오늘의 통독" loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-        <div class="cap" id="td-fallback" hidden>
-          <b>오늘 회차를 불러오지 못했습니다</b>
-          <span><a href="시안E_아카데미.html">성경 아카데미에서 보기 &rarr;</a></span></div>
+        <div class="cap" id="td-fallback" hidden><b>오늘 읽을 곳 &mdash; <span id="td-ref2"></span></b><span>영상은 아직 도착하지 않았습니다 &middot; <a href="시안E_아카데미.html">성경 아카데미에서 보기 &rarr;</a></span></div>
         <div class="td-nav"><button type="button" id="td-prev">&larr; 이전 회차</button>
           <span id="td-pos"></span>
           <button type="button" id="td-next">다음 회차 &rarr;</button></div>
@@ -572,10 +570,10 @@ fetch('latest.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():nu
     if(!r){ if(틀)틀.hidden=true; if(폴)폴.hidden=false; if(날)날.textContent='준비 중'; if(참)참.textContent=''; return; }
     if(날)날.textContent=r.일+'일차'; if(참)참.textContent=r.범위||'';
     if(pos)pos.textContent=r.일+'일차 / 365';
-    var id=(덮&&덮.덮어쓰기&&덮.덮어쓰기[String(r.일)])||r.영상;
+    var id=(덮&&덮.덮어쓰기&&덮.덮어쓰기[String(r.일)])||null; /* ★2026-08-23: 카톡 통독 영상이 없으면 강의 영상을 복제하지 않는다(두 칸이 같아 보이는 문제). 대신 오늘 읽을 본문을 안내한다 — 영상이 없어도 '오늘 무엇을 읽는가'는 항상 보인다. */
     var f=document.getElementById('td-video');
     if(id&&f){ f.src='https://www.youtube.com/embed/'+id; if(틀)틀.hidden=false; if(폴)폴.hidden=true; }
-    else { if(틀)틀.hidden=true; if(폴)폴.hidden=false; }
+    else { if(틀)틀.hidden=true; if(폴)폴.hidden=false; var r2=document.getElementById('td-ref2'); if(r2)r2.textContent=(r.범위||''); }
   }
   function 묶기(pid,nid,이동){
     var p=document.getElementById(pid),n=document.getElementById(nid);
