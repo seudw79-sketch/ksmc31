@@ -229,7 +229,12 @@ window.__ytSet=function(img,id){img.setAttribute('data-vid',id);img.setAttribute
   .cols--2{grid-template-columns:repeat(2,1fr)}
   @media(max-width:640px){.cols--2{grid-template-columns:1fr}}
   .map{display:block;margin-top:24px}
-  .quote{font-family:var(--serif);font-size:19px;line-height:1.5;color:#000;max-width:24ch}
+  /* ★2026-10-02(_티켓_홈페이지_인용문_생성기_20261002) — max-width:24ch 가 글자수(24)와 같아 늘 두 줄로
+     끊겼다(오너 사진 신고). 폭 제한 대신 뷰포트 기반 clamp 로 글자 크기를 줄여 한 줄을 유지한다.
+     Playwright 실측(390/768/1280): 1줄·가로넘침0 · 390px 에서 13px(하한) 도달 — 그 밑은 중년 회중이
+     못 읽어 내리지 않는다(master 지시). letter-spacing -.5px 는 390px 13px 환경에서 274px 컨테이너에
+     여유 4px 확보용(실측 전: 270.0px) — 1280px 에서도 같은 값 적용(폭 넉넉해 넘침 없음, 실측 400.8px). */
+  .quote{font-family:var(--serif);font-size:clamp(13px,calc(6.81px + 1.587vw),19px);line-height:1.5;color:#000;letter-spacing:-.5px}
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBE29Z8PJJ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
