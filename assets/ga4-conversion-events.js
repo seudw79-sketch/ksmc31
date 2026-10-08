@@ -23,6 +23,7 @@
     if (isHost('open.kakao.com')) {
       window.gtag('event', 'generate_lead', { method: 'kakao_openchat', transport_type: 'beacon' });
       window.gtag('event', 'kakao_openchat_click', params);
+      window.gtag('event', 'kakao_chat_click', params);
     } else if (isHost('map.kakao.com') || isHost('map.naver.com')) {
       window.gtag('event', 'map_click', params);
     } else if (isHost('youtube.com') || isHost('youtu.be')) {
