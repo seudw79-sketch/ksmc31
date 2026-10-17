@@ -33,7 +33,9 @@
       send('click_kakao', { link_url: url.href });
       send('generate_lead', { method: 'kakao_openchat' });
       send('kakao_openchat_click', {});
-      send('kakao_chat_click', {});
+      /* kakao_chat_click is NOT sent here: GA4 event-create rule 15941525617 (click + link_url~open.kakao.com)
+         already creates it from the enhanced-measurement outbound click. Sending it here too double-counted
+         the key event (3 clicks -> 6 key events, realtime 2026-10-18). */
     } else if (isHost('map.kakao.com') || isHost('map.naver.com') || isHost('naver.me') ||
                isHost('maps.google.com') || isHost('goo.gl') || isHost('maps.app.goo.gl')) {
       send('click_directions', { link_url: url.href });
