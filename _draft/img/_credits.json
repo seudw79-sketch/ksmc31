@@ -1,0 +1,54 @@
+{
+ "jubo": {
+  "file": "img/jubo.webp",
+  "bytes": 112712,
+  "quality": 82,
+  "size": "1200x800",
+  "title": "Woman reading a letter.[1]\nAlternative title(s): \n\nWoman in Blue Reading a Letter.",
+  "artist": "Johannes Vermeer",
+  "date": "circa 1662-1663 (1647-1675)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Vermeer,_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg",
+  "credit": "Unknown sourceUnknown source"
+ },
+ "qt": {
+  "file": "img/qt.webp",
+  "bytes": 148088,
+  "quality": 76,
+  "size": "1200x800",
+  "title": "Morning on the Seine near Giverny",
+  "artist": "Claude Monet",
+  "date": "1897date QS:P571,+1897-00-00T00:00:00Z/9",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Morning_on_the_Seine_near_Giverny_MET_DT1903.jpg",
+  "credit": "This file was donated to Wikimedia Commons as part of a project by the Metropolitan Museum of Art. See the Image and Data Resources Open Access Policy"
+ },
+ "academy": {
+  "file": "img/academy.webp",
+  "bytes": 110018,
+  "quality": 76,
+  "size": "1200x800",
+  "title": "Young Girl Reading",
+  "artist": "Jean Honoré Fragonard",
+  "date": "circa 1769date QS:P571,+1769-00-00T00:00:00Z/9,P1480,Q5727902",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Jean_Honor%C3%A9_Fragonard,_Young_Girl_Reading,_c._1769,_NGA_46303.jpg",
+  "credit": "This file was donated to Wikimedia Commons as part of a project by the National Gallery of Art. Please see the Gallery's Open Access Policy."
+ },
+ "reading": {
+  "file": "img/reading.webp",
+  "bytes": 148092,
+  "quality": 46,
+  "size": "1200x675",
+  "title": "Wheat Field with Cypresses label QS:Len,\"Wheat Field with Cypresses\"",
+  "artist": "Vincent van Gogh",
+  "date": "1889date QS:P571,+1889-00-00T00:00:00Z/9",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Wheat_Field_with_Cypresses_MET_DT1567.jpg",
+  "credit": "This file was donated to Wikimedia Commons as part of a project by the Metropolitan Museum of Art. See the Image and Data Resources Open Access Policy"
+ }
+}

@@ -1,0 +1,6 @@
+## mobile 390px errors=none
+ {"day": "291일차", "ref": "요한복음 7장, 누가복음 17장, 누가복음 9-10장", "pos": "291 / 365", "jb": "2026년 10월 18일 주보", "jb_href": "https://wt.test/jubo.html?v=20261018", "imgs": ["1200x800", "1200x800", "1200x800", "1200x675"], "cards": [274, 274, 274], "section_h": 2179, "panel_cols": "274px"}
+## desktop 1280px errors=none
+ {"day": "291일차", "ref": "요한복음 7장, 누가복음 17장, 누가복음 9-10장", "pos": "291 / 365", "jb": "2026년 10월 18일 주보", "jb_href": "https://wt.test/jubo.html?v=20261018", "imgs": ["1200x800", "1200x800", "1200x800", "1200x675"], "cards": [336, 336, 336], "section_h": 1361, "panel_cols": "443.328px 620.656px"}
+re-render mobile: errors=none td-ref line boxes=3
+re-render desktop: errors=none td-ref line boxes=3

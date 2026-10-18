@@ -1,0 +1,48 @@
+{
+ "contrast": {
+  "eyebrow #1F6459 on teal tint": 6.13,
+  "eyebrow #1F6459 on sand tint": 6.16,
+  "eyebrow #1F6459 on slate tint": 6.08,
+  "body #404140 on sand tint": 9.1,
+  "title #000 on slate tint": 18.38,
+  "button white on #000": 21.0,
+  "panel white on #404140": 10.25,
+  "panel eyebrow #9FD8CC on #404140": 6.43,
+  "panel outline button white border on #404140 (UI 3:1)": 10.25,
+  "card border #E5E2DF vs white page (decorative)": 1.29
+ },
+ "images": {
+  "jubo": {
+   "alt": "Johannes Vermeer, 〈Woman Reading a Letter〉 (1662) · Public domain",
+   "file": "img/jubo.webp",
+   "bytes": 112712,
+   "size": "1200x800",
+   "license": "Public domain",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Vermeer,_Johannes_-_Woman_reading_a_letter_-_ca._1662-1663.jpg"
+  },
+  "qt": {
+   "alt": "Claude Monet, 〈Morning on the Seine near Giverny〉 (1897) · CC0",
+   "file": "img/qt.webp",
+   "bytes": 148088,
+   "size": "1200x800",
+   "license": "CC0",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Morning_on_the_Seine_near_Giverny_MET_DT1903.jpg"
+  },
+  "academy": {
+   "alt": "Jean Honoré Fragonard, 〈Young Girl Reading〉 (1769) · CC0",
+   "file": "img/academy.webp",
+   "bytes": 110018,
+   "size": "1200x800",
+   "license": "CC0",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Jean_Honor%C3%A9_Fragonard,_Young_Girl_Reading,_c._1769,_NGA_46303.jpg"
+  },
+  "reading": {
+   "alt": "Vincent van Gogh, 〈Wheat Field with Cypresses label QS:Len,\"Wheat Field with Cypresses\"〉 (1889) · CC0",
+   "file": "img/reading.webp",
+   "bytes": 148092,
+   "size": "1200x675",
+   "license": "CC0",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Wheat_Field_with_Cypresses_MET_DT1567.jpg"
+  }
+ }
+}
