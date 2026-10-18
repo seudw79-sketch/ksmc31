@@ -7,6 +7,11 @@
     if (typeof window.gtag !== 'function') return;
     var p = { transport_type: 'beacon' };
     for (var k in params) if (Object.prototype.hasOwnProperty.call(params, k)) p[k] = params[k];
+    if (name === 'kakao_chat_click' || name === 'phone_click') {
+      p.send_to = ['G-HBE29Z8PJJ', 'AW-18487103627'];
+    } else if (name === 'saegajok_view') {
+      p.send_to = 'G-HBE29Z8PJJ';
+    }
     window.gtag('event', name, p);
   }
 
@@ -33,6 +38,7 @@
       send('click_kakao', { link_url: url.href });
       send('generate_lead', { method: 'kakao_openchat' });
       send('kakao_openchat_click', {});
+      send('kakao_chat_click', {}); /* name imported to Google Ads as PRIMARY conversion (10/19 fix: was never sent) */
       /* kakao_chat_click is NOT sent here: GA4 event-create rule 15941525617 (click + link_url~open.kakao.com)
          already creates it from the enhanced-measurement outbound click. Sending it here too double-counted
          the key event (3 clicks -> 6 key events, realtime 2026-10-18). */
