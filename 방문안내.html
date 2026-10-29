@@ -41,6 +41,7 @@ a{color:inherit}img{display:block;max-width:100%;height:auto}
 .hd.is-stuck{box-shadow:rgba(0,0,0,.3) 0 4px 20px;padding:14px 20px}  /* A3 ② 스크롤 내리면 그림자 진해지고 살짝 줄어듦 */
 .sentinel{height:1px}
 .logo{font-family:var(--serif);font-weight:700;font-size:22px;text-decoration:none;letter-spacing:-.01em;margin-right:auto}
+.logo img{display:block;height:38px;width:auto}@media(max-width:640px){.logo img{height:30px}}  /* 가로 로고(2026-10-28 확정) — 데스크톱 38px · 모바일 30px */
 /* 메뉴 — §7 ①②: 12.8px · 400 · lh 1 · 자간 .1em · 안쪽 여백 .75em(12px) · 대문자화 없음(한글) · hover 청록 */
 .nav{display:flex;gap:0;align-items:center}
 .nav a{font-size:12.8px;font-weight:400;line-height:1;letter-spacing:.1em;padding:12px;text-decoration:none}
@@ -245,12 +246,15 @@ window.__ytSet=function(img,id){img.setAttribute('data-vid',id);img.setAttribute
 gtag('js',new Date());gtag('config','G-HBE29Z8PJJ');gtag('config','AW-18487103627');</script>
 <script src="assets/ga4-conversion-events.js" defer></script>
 <!--SEO-JSONLD--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://ksmc31.kr/#website","url":"https://ksmc31.kr/","name":"큰샘교회","alternateName":["큰샘감리교회","큰샘감리교회 광명"],"inLanguage":"ko","publisher":{"@id":"https://ksmc31.kr/#org"}},{"@type":["Church","Organization"],"@id":"https://ksmc31.kr/#org","name":"큰샘교회","legalName":"큰샘감리교회","alternateName":["큰샘감리교회","큰샘감리교회 광명","광명 큰샘교회"],"url":"https://ksmc31.kr/","logo":"https://ksmc31.kr/assets/og.jpg","image":"https://ksmc31.kr/assets/og.jpg","telephone":"0507-1369-0198","email":"office@ksmc31.kr","address":{"@type":"PostalAddress","streetAddress":"기아로 23 (소하동) 4층","addressLocality":"광명시","addressRegion":"경기도","addressCountry":"KR"},"sameAs":["https://www.youtube.com/channel/UC6kFMamsryfHU6mB61vtttw","https://map.naver.com/p/entry/place/34542008","https://www.instagram.com/ksmc140301/"]}]}</script><!--/SEO-JSONLD-->
+<link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
 </head>
 <body>
 <div class="sentinel" id="top-sentinel"></div>
 <div class="banner"><span>주일예배 오전 11시 · 성경공부 주일 오후 1시 · 아침예배 오전 7시</span></div>
 <header class="hd">
-  <a class="logo" href="index.html">큰샘교회</a>
+  <a class="logo" href="index.html"><img src="assets/brand/logo.svg" alt="큰샘교회" width="111" height="38"></a>
   <input type="checkbox" id="tg" class="tg" aria-label="메뉴" aria-controls="drawer">
   <nav id="site-nav" class="nav" aria-label="주 메뉴"><a href="교회소개.html">교회소개</a><a href="예배안내.html">예배안내</a><a href="아카데미.html">성경 아카데미</a><a href="칼럼.html">신앙 칼럼</a><a href="주보.html">온라인 주보</a><a href="온라인예배.html">온라인 예배</a></nav>
   <a class="pill" href="새가족.html">새가족 안내</a>
