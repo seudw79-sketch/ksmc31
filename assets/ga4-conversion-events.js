@@ -50,6 +50,11 @@
     }
   });
 
+  /* saegajok_view: once per load on the 새가족 page (Ads secondary conversion; pathname is percent-encoded). */
+  try {
+    if (/\/새가족(\.html)?\/?$/.test(decodeURIComponent(window.location.pathname))) send('saegajok_view', {});
+  } catch (_) {}
+
   /* scroll_90: once, when 90% of the page height has been scrolled into view. */
   var scrollSent = false;
   function checkScroll() {
