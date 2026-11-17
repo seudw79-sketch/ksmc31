@@ -38,9 +38,11 @@
       send('click_kakao', { link_url: url.href });
       send('generate_lead', { method: 'kakao_openchat' });
       send('kakao_openchat_click', {});
-      /* The Google tag creates kakao_chat_click for open.kakao.com outbound clicks.
-         Keep the direct event only for pf.kakao.com, which that rule does not cover. */
-      if (isHost('pf.kakao.com')) send('kakao_chat_click', {});
+      /* kakao_chat_click (Ads primary conversion) is sent directly for every Kakao chat link.
+         T1117-ADSCONV-FIX: the GA4 "이벤트 만들기" rule (click + link_url contains open.kakao.com -> kakao_chat_click)
+         missed 3 of 11 open.kakao.com clicks in the 30 days to 2026-11-16; that rule is retired so exactly ONE
+         kakao_chat_click fires per click (this one). Do not re-create the rule without removing this line. */
+      send('kakao_chat_click', {});
     } else if (isHost('map.kakao.com') || isHost('map.naver.com') || isHost('naver.me') ||
                isHost('maps.google.com') || isHost('goo.gl') || isHost('maps.app.goo.gl')) {
       send('click_directions', { link_url: url.href });
