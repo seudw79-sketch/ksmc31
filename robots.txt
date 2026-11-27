@@ -3,3 +3,4 @@ Allow: /
 Disallow: /시안E_재정.html
 Disallow: /재정.html
 Sitemap: https://ksmc31.kr/sitemap.xml
+#DaumWebMasterTool:6a31cdac2b07134b4dd0b152163f8e2b1e4581beb883c8c845bf456839edb2b4:wRgbLNgPvWQylyHAj1bNag==
